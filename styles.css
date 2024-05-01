@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.toolbar {
+    width: 100%;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos al extremo derecho */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+button {
+    margin-right: 10px; /* Agrega un espacio entre el botón y el borde derecho */
+}
+
+canvas {
+    display: block;
+    background-color: white;
+    cursor: crosshair;
+    width: 100%;
+    height: calc(100% - 50px); /* Restamos el alto de la barra superior */
+}
