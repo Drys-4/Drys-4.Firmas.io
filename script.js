@@ -79,12 +79,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function downloadCanvas() {
-        const dataURL = canvas.toDataURL('image/jpeg');
+        const previousBackgroundColor = ctx.fillStyle;
+        const dataURL = canvas.toDataURL('image/jpg');
         const a = document.createElement('a');
         a.href = dataURL;
         a.download = 'drawing.jpg';
         document.body.appendChild(a);
         a.click();
-        document.body.removeChild(a);
-    }
+        document.body.removeChild(a);  
+        ctx.fillStyle = previousBackgroundColor;
+    }    
 });
